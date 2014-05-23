@@ -1,5 +1,7 @@
 package com.puzzels.math;
 
+import java.util.ArrayList;
+
 public class SumOfEvenFbNumber {
 
 	public int[] getFbElements(int howManyElements) {
@@ -26,5 +28,36 @@ public class SumOfEvenFbNumber {
 			data[index-1] = index;
 		}
 		return data;
+	}
+	
+	private ArrayList<Integer> initiliaze(ArrayList<Integer> data, int numberOfElements){
+		for(int index = 1; index<=numberOfElements;++index){
+			data.add(index-1, index);
+		}
+		return data;
+	}
+	
+	public int sumOfEvenFBTerms(int termMaxValue){
+		ArrayList<Integer> fbTerms = new ArrayList<Integer>();
+		
+		int termIndex = 2;
+		int nextTerm = 0;
+		int sumValue = 0;
+		
+		fbTerms = this.initiliaze(fbTerms, 2);
+		
+		while(true){
+			nextTerm = fbTerms.get(termIndex-1) + fbTerms.get(termIndex-2);
+			System.out.println("Next Term  "+nextTerm+"  Sum Value "+sumValue);
+			if(nextTerm > termMaxValue){
+				break;
+			}else{
+				fbTerms.add(termIndex, nextTerm);
+				if(nextTerm % 2 == 0)
+					sumValue += nextTerm;
+			}
+			termIndex++;
+		}
+		return sumValue;
 	}
 }

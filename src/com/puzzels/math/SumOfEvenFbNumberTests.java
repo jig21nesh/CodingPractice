@@ -47,5 +47,12 @@ public class SumOfEvenFbNumberTests {
 		
 		assertArrayEquals(expectedElements, object.getFbElements(numberOfElements));
 	}
+	
+	
+	@Test
+	public void getSumOfFBTermsWhenHighestValueTermIs5() {
+		SumOfEvenFbNumber object = new SumOfEvenFbNumber();
+		assertEquals(11, object.sumOfEvenFBTerms(5));
+	}
 
 }
