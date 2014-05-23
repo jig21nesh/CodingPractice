@@ -52,7 +52,19 @@ public class SumOfEvenFbNumberTests {
 	@Test
 	public void getSumOfFBTermsWhenHighestValueTermIs5() {
 		SumOfEvenFbNumber object = new SumOfEvenFbNumber();
-		assertEquals(11, object.sumOfEvenFBTerms(5));
+		assertEquals(2, object.sumOfEvenFBTerms(5));
 	}
-
+	
+	@Test
+	public void getSumOfFBTermsWhenHighestValueTermIs10() {
+		SumOfEvenFbNumber object = new SumOfEvenFbNumber();
+		assertEquals(10, object.sumOfEvenFBTerms(10));
+	}
+	//4,000,000
+	
+	@Test
+	public void getSumOfFBTermsWhenHighestValueTermIs4000000() {
+		SumOfEvenFbNumber object = new SumOfEvenFbNumber();
+		assertEquals(10, object.sumOfEvenFBTerms(4000000));
+	}
 }

@@ -37,6 +37,15 @@ public class SumOfEvenFbNumber {
 		return data;
 	}
 	
+	private int addInitialValues(int sumValue, ArrayList<Integer> fbTerms){
+		for(int index = 0; index < 2; ++index){
+			if(Integer.valueOf(fbTerms.get(index)) % 2 == 0){
+				sumValue += Integer.valueOf(fbTerms.get(index));
+			}
+		}
+		return sumValue;
+	}
+	
 	public int sumOfEvenFBTerms(int termMaxValue){
 		ArrayList<Integer> fbTerms = new ArrayList<Integer>();
 		
@@ -58,6 +67,7 @@ public class SumOfEvenFbNumber {
 			}
 			termIndex++;
 		}
+		sumValue = this.addInitialValues(sumValue, fbTerms);
 		return sumValue;
 	}
 }
