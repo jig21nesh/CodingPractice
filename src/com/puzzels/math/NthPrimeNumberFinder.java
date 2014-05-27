@@ -5,13 +5,33 @@ public class NthPrimeNumberFinder {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		NthPrimeNumberFinder obj = new NthPrimeNumberFinder();
-		System.out.println(obj.getNthPrimeNumber(6));
+		//System.out.println(obj.getNthPrimeNumber(6));
+		System.out.println(obj.getSumOfNthPrimeNumber(2000000));
 	}
-
-	public int getNthPrimeNumber(int nthPrimeNumber) {
+	
+	
+	public long getSumOfNthPrimeNumber(int primeNumberLessThanThisNumber){
+		long sum = 0;
+		long index = 1;
+		while(true){
+			long primeNumber = this.getNthPrimeNumber(index);
+			//System.out.println("  primeNumber  "+primeNumber+" Sum "+sum+"  index  "+index);
+			if(primeNumber < primeNumberLessThanThisNumber){
+				sum += primeNumber;
+				index++;
+				continue;
+			}else{
+				break;
+			}
+		}
+		System.out.println("Sum is "+sum);
+		return sum;
+	}
+	
+	public long getNthPrimeNumber(long nthPrimeNumber) {
 		// TODO Auto-generated method stub
-		int index = 0;
-		int primeNumber = 1;
+		long index = 0;
+		long primeNumber = 1;
 		while(true){
 			index++;
 			primeNumber = this.getPrimeNumber(primeNumber);
@@ -23,8 +43,8 @@ public class NthPrimeNumberFinder {
 		}
 		return primeNumber;
 	}
-	private int getPrimeNumber(int number){
-		int index = number;
+	private long getPrimeNumber(long number){
+		long index = number;
 		boolean isModuleZero = false;
 		while(true){
 			index++;
