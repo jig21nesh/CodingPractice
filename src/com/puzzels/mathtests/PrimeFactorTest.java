@@ -1,6 +1,7 @@
-package com.puzzels.math;
+package com.puzzels.mathtests;
 import static org.junit.Assert.*;
 
+import com.puzzels.math.PrimeFactor;
 import org.junit.Test;
 
 

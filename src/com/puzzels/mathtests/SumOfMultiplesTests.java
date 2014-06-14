@@ -1,7 +1,8 @@
-package com.puzzels.math;
+package com.puzzels.mathtests;
 
 import static org.junit.Assert.*;
 
+import com.puzzels.math.SumOfMultiples;
 import org.junit.Test;
 import org.junit.experimental.categories.Categories.ExcludeCategory;
 

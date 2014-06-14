@@ -1,7 +1,8 @@
-package com.puzzels.math;
+package com.puzzels.mathtests;
 
 import static org.junit.Assert.*;
 
+import com.puzzels.math.SpecialPythagoreanTriplet;
 import org.junit.Test;
 
 public class SpecialPythagoreanTripletTests {

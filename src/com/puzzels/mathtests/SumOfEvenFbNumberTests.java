@@ -1,7 +1,8 @@
-package com.puzzels.math;
+package com.puzzels.mathtests;
 
 import static org.junit.Assert.*;
 
+import com.puzzels.math.SumOfEvenFbNumber;
 import org.junit.Test;
 
 public class SumOfEvenFbNumberTests {
